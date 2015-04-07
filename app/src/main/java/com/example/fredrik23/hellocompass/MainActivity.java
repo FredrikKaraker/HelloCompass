@@ -1,5 +1,6 @@
 package com.example.fredrik23.hellocompass;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
@@ -45,8 +47,10 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    /** Called when the user clicks the Send button */
+    /** Called when the user clicks the Start button */
     public void goToCompass(View view) {
-        // Do something in response to button
+
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }
